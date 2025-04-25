@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shoe Fundraiser | Help Me Out!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #f8f9fa, #e3f2fd);
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      height: 200px;
+      border-radius: 15px;
+      background: linear-gradient(120deg, #007cf0, #00dfd8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      color: white;
+      font-size: 2.5rem;
+      text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+      animation: slideDown 1s ease-out;
+    }
+
+    @keyframes slideDown {
+      from { transform: translateY(-20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    .story {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .progress {
+      margin-bottom: 30px;
+    }
+
+    .bar {
+      background: #e0e0e0;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 30px;
+    }
+
+    .bar-fill {
+      height: 100%;
+      width: 70%;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      text-align: center;
+      line-height: 30px;
+      color: white;
+      font-weight: bold;
+      transition: width 0.5s ease;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .donate-form {
+      background: #ffffff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .donate-form label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .donate-form input,
+    .donate-form button {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .donate-form button {
+      background: #007cf0;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .donate-form button:hover {
+      background: #005bb5;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Support My Cool Shoe Campaign!</h1>
+  </header>
+
+  <div class="story">
+    <p>
+      Hi! I'm raising funds to bring my dream sneaker line to life! All your contributions will go towards designing, producing, and launching an awesome new pair of shoes that I truly need. Every rupee helps — thank you for the support!
+    </p>
+  </div>
+
+  <div class="progress">
+    <div class="bar">
+      <div class="bar-fill">₹120 / ₹1500</div>
+    </div>
+  </div>
+
+  <div class="gallery">
+    <img src="Shoe1.png" alt="Cool Shoe 1">
+    <img src="Shoe2.png" alt="Cool Shoe 2">
+    <img src="Shoe3.png" alt="Cool Shoe 3">
+    <img src="Shoe4.png" alt="Cool Shoe 4">
+  </div>
+
+  <div class="donate-form">
+    <form action="thankyou.html">
+      <label for="name">Your Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="amount">Donation Amount (INR)</label>
+      <input type="number" id="amount" placeholder="Enter amount" min="1" required>
+
+      <button type="submit">Donate Now</button>
+    </form>
+  </div>
+
+</body>
+</html>
